@@ -1,4 +1,4 @@
-export function water(heights: number[]): number {
+export function trap(heights: number[]): number {
     let water = 0;
     for (let p = 0; p < heights.length; p++) {
         let maxLeft = 0;

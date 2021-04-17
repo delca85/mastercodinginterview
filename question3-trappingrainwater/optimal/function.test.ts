@@ -1,6 +1,6 @@
 import { water } from './function';
 
-describe('trapping-rain-water problem bruteforce solution tests', () => {
+describe('trapping-rain-water problem optimal solution tests', () => {
     it('should return 0 when the heights array is void ', () => {
         const heights = [];
         const expectedResult = 0;

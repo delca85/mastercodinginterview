@@ -2,19 +2,16 @@ type LinkedListItem = {
     value: number;
     next: LinkedListItem;
 };
-type LinkedList = {
-    head?: LinkedListItem;
-};
 
-export function reverseLinkedList(list: LinkedList): LinkedList {
-    let currentValue = list?.head;
-    let reversed = {} as LinkedList;
+export function reverseLinkedList(head: LinkedListItem): LinkedListItem {
+    let currentValue = head;
+    let reversed = null;
     while (currentValue) {
-        reversed.head = {
-            next: reversed.head || null,
+        reversed = {
             value: currentValue.value,
+            next: reversed,
         };
         currentValue = currentValue.next;
     }
-    return reversed;
+    return reversed || null;
 }

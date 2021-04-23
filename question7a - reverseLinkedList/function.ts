@@ -4,14 +4,14 @@ type LinkedListItem = {
 };
 
 export function reverseLinkedList(head: LinkedListItem): LinkedListItem {
-    let currentValue = head;
+    let currentNode = head;
     let reversed = null;
-    while (currentValue) {
+    while (currentNode) {
         reversed = {
-            value: currentValue.value,
+            value: currentNode.value,
             next: reversed,
         };
-        currentValue = currentValue.next;
+        currentNode = currentNode.next;
     }
-    return reversed || null;
+    return reversed;
 }

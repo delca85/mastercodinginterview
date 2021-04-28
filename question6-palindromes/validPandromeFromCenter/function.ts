@@ -1,5 +1,5 @@
 export function validPalindrome(s: string): boolean {
-    s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    s = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
     let leftPointer = Math.floor(s.length / 2),
         rightPointer = leftPointer;
 

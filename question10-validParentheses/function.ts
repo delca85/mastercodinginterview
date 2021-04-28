@@ -1,7 +1,7 @@
 const parentheses = {
-    '(': ')',
-    '[': ']',
-    '{': '}',
+    "(": ")",
+    "[": "]",
+    "{": "}"
 };
 
 export function isValid(s: string): boolean {

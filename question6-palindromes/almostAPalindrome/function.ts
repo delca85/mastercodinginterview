@@ -1,7 +1,7 @@
-import { validPalindrome } from '../validPandromeFromCenter/function';
+import { validPalindrome } from "../validPandromeFromCenter/function";
 
 export function almostAPalindrome(s: string): boolean {
-    s = s.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+    s = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
     let leftPointer = 0,
         rightPointer = s.length - 1;
 

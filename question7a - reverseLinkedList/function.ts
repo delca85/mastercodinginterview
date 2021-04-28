@@ -9,7 +9,7 @@ export function reverseLinkedList(head: LinkedListItem): LinkedListItem {
     while (currentNode) {
         reversed = {
             value: currentNode.value,
-            next: reversed,
+            next: reversed
         };
         currentNode = currentNode.next;
     }

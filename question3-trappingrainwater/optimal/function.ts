@@ -9,14 +9,14 @@ export function trap(heights: number[]): number {
             if (maxLeft < heights[pLeft]) {
                 maxLeft = heights[pLeft];
             } else {
-                water += (maxLeft - heights[pLeft]);
+                water += maxLeft - heights[pLeft];
             }
             pLeft++;
         } else {
             if (maxRight < heights[pRight]) {
                 maxRight = heights[pRight];
             } else {
-                water += (maxRight - heights[pRight]);
+                water += maxRight - heights[pRight];
             }
             pRight--;
         }

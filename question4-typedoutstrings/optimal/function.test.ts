@@ -1,44 +1,44 @@
-import { backspaceCompare } from "./function";
+import { backspaceCompare } from './function';
 
-describe("typed-out-strings problem optimal solution tests", () => {
-    it("should return false when the two strings are different", () => {
-        const s = "b";
-        const t = "a#c";
+describe('typed-out-strings problem optimal solution tests', () => {
+    it('should return false when the two strings are different', () => {
+        const s = 'b';
+        const t = 'a#c';
         const expectedResult = false;
         expect(backspaceCompare(s, t)).toBe(expectedResult);
     });
 
-    it("should return true when the two strings are equal", () => {
-        const s = "a##c";
-        const t = "#a#c";
+    it('should return true when the two strings are equal', () => {
+        const s = 'a##c';
+        const t = '#a#c';
         const expectedResult = true;
         expect(backspaceCompare(s, t)).toBe(expectedResult);
     });
 
-    it("should return true when the two strings are equal", () => {
-        const s = "ab##";
-        const t = "c#d#";
+    it('should return true when the two strings are equal', () => {
+        const s = 'ab##';
+        const t = 'c#d#';
         const expectedResult = true;
         expect(backspaceCompare(s, t)).toBe(expectedResult);
     });
 
-    it("should return true when the two strings are equal", () => {
-        const s = "ab#c";
-        const t = "ad#c";
+    it('should return true when the two strings are equal', () => {
+        const s = 'ab#c';
+        const t = 'ad#c';
         const expectedResult = true;
         expect(backspaceCompare(s, t)).toBe(expectedResult);
     });
 
-    it("should return false when the two strings are equal but in different case", () => {
-        const s = "Ab#c";
-        const t = "ad#c";
+    it('should return false when the two strings are equal but in different case', () => {
+        const s = 'Ab#c';
+        const t = 'ad#c';
         const expectedResult = false;
         expect(backspaceCompare(s, t)).toBe(expectedResult);
     });
 
-    it("should return false when the two strings are different", () => {
-        const s = "bxj##tw";
-        const t = "bxj###tw";
+    it('should return false when the two strings are different', () => {
+        const s = 'bxj##tw';
+        const t = 'bxj###tw';
         const expectedResult = false;
         expect(backspaceCompare(s, t)).toBe(expectedResult);
     });

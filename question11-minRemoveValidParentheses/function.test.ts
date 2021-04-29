@@ -9,7 +9,7 @@ describe('Question 11 - Minimum Remove to Make Valid Parentheses solutions', () 
 
     it('should remove a bracket to produce a valid string - 2', () => {
         const s = 'la)b(c)d';
-        const expectedResult = 'ab(c)d';
+        const expectedResult = 'lab(c)d';
         expect(minRemoveToMakeValid(s)).toBe(expectedResult);
     });
 

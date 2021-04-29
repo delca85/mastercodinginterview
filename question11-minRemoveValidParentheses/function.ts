@@ -1,18 +1,17 @@
 export function minRemoveToMakeValid(s: string): string {
     const stack = [],
-        result = [];
-    for (let p = 0; p < s.length; p++) {
-        if (s[p] === ')') {
-            if (stack.length) {
-                stack.pop();
-                result.push(s[p]);
-            }
-        } else if (s[p] === '(') {
-            stack.push(result.length);
-            result.push(s[p]);
-        } else {
-            result.push(s[p]);
+        sToArray = s.split('');
+    for (let p = 0; p < sToArray.length; p++) {
+        if (sToArray[p] === ')' && stack.length) {
+            stack.pop();
+        } else if (sToArray[p] === ')') {
+            sToArray[p] = '';
+        } else if (sToArray[p] === '(') {
+            stack.push(p);
         }
     }
-    return result.filter((char, index) => !stack.includes(index)).join('');
+    while (stack.length) {
+        sToArray[stack.pop()] = '';
+    }
+    return sToArray.join('');
 }

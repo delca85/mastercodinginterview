@@ -1,6 +1,7 @@
 import { bubbleSort } from './bubbleSort';
 import { insertionSort } from './insertionSort';
 import { mergeSort } from './mergeSort';
+import { quickSort } from './quickSort';
 import { selectionSort } from './selectionSort';
 
 describe('Sorting different algorithms tests', () => {
@@ -12,6 +13,7 @@ describe('Sorting different algorithms tests', () => {
         expect(selectionSort(nums)).toEqual(expected);
         expect(insertionSort(nums)).toEqual(expected);
         expect(mergeSort(nums)).toEqual(expected);
+        expect(quickSort(nums, 0, nums.length - 1)).toEqual(expected);
     });
 
     it('should sort a number array without duplicates and even length', () => {
@@ -22,5 +24,6 @@ describe('Sorting different algorithms tests', () => {
         expect(selectionSort(nums)).toEqual(expected);
         expect(insertionSort(nums)).toEqual(expected);
         expect(mergeSort(nums)).toEqual(expected);
+        expect(quickSort(nums, 0, nums.length - 1)).toEqual(expected);
     });
 });
